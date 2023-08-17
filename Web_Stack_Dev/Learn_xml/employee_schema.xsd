@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="employees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="employee">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="personal_life">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="first_name" type="xs:string" />
+                    <xs:element name="last_name" type="xs:string" />
+                    <xs:element name="date">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="day" type="xs:unsignedByte" />
+                          <xs:element name="month" type="xs:unsignedByte" />
+                          <xs:element name="year" type="xs:unsignedShort" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="person">
+                      <xs:complexType>
+                        <xs:attribute name="gender" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="employee_life">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="position" type="xs:string" />
+                    <xs:element name="salary" type="xs:decimal" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="contact_info">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="phno" type="xs:unsignedLong" />
+                    <xs:element name="email" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
