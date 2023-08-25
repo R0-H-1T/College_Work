@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AqzzXsXUY6edM2PgKNcwaabKdd77fx7L5miQ53f1rmHBbUoJ48F7Bv04eq-tDm6Z' async defer></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Culinary Delights</title>
+
+    <style>
+        .my_container {
+            display: flex;
+            justify-content: center;
+            margin-top:120px;
+            
+        }
+        
+        .sub_container {
+            border:1px solid rgb(194, 194, 194);
+            border-radius:20px;
+            width: 50%;
+            margin-bottom: 90px;
+        }
+        .row{
+            margin-top:30px; 
+        }
+        .btn.btn-primary{
+            margin-bottom:20px;
+        }
+        #myMap{
+            margin-top:40px;
+            width:65%;
+            height:400px;
+            position:relative;
+            margin-bottom:40px;
+        }
+        .display-4{
+            margin-top:30px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <!-- Navbar content -->
+      
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Cullinary Delights</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./menu.html">Menu</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown link
+                </a>
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </nav>
+
+
+
+    <!-- name , email, desired reservation date, party size and any special guests. -->
+    
+    <div class="my_container">
+        <div class="sub_container">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="input-group flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">First</span>
+                            <input type="text" class="form-control" placeholder="Name" aria-label="Username"
+                                aria-describedby="addon-wrapping">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-group flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">Last</span>
+                            <input type="text" class="form-control" placeholder="Name" aria-label="Username"
+                                aria-describedby="addon-wrapping">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="input-group flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">Reservation Date</span>
+                            <input type="number" class="form-control" placeholder="From" aria-label="Username"
+                                aria-describedby="addon-wrapping">
+                            <input type="number" class="form-control" placeholder="To" aria-label="Username"
+                            aria-describedby="addon-wrapping">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-group flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">Party Size</span>
+                            <input type="number" class="form-control" placeholder="Size" aria-label="Username"
+                                aria-describedby="addon-wrapping">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input-group flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">Email</span>
+                            <input type="text" class="form-control" placeholder="Enter your email" aria-label="Username"
+                                aria-describedby="addon-wrapping">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="input-group">
+                            <span class="input-group-text">Any Special Guests? </span>
+                            <textarea class="form-control" placeholder="" aria-label="With textarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+<hr>
+    <center>
+
+        <span class="display-4">You can find us here!</span>
+            <!-- <h1>My location</h1> -->
+            <!-- <button class="btn btn-primary" type="button" onclick="getLocation()">Get my location</button> -->
+            <div id="myMap"></div>
+    </center>
+
+<script>
+     function GetMap() {
+        // var map = new Microsoft.Maps.Map('#myMap', {
+        //     credentials: 'AqzzXsXUY6edM2PgKNcwaabKdd77fx7L5miQ53f1rmHBbUoJ48F7Bv04eq-tDm6Z'
+        // });
+
+        // //Request the user's location
+        // navigator.geolocation.getCurrentPosition(function (position) {
+        //     var loc = new Microsoft.Maps.Location(
+        //         position.coords.latitude,
+        //         position.coords.longitude);
+
+        //     //Add a pushpin at the user's location.
+        //     var pin = new Microsoft.Maps.Pushpin(loc);
+        //     map.entities.push(pin);
+
+        //     //Center the map on the user's location.
+        //     map.setView({ center: loc, zoom: 15 });
+        // });
+        var map = new Microsoft.Maps.Map('#myMap', {
+            zoom: 15
+        });
+        var center = map.getCenter()
+        var pin = new Microsoft.Maps.Pushpin(center, {
+                color: 'blue',
+            });
+
+            //Add the pushpin to the map
+            map.entities.push(pin);
+    }
+
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
