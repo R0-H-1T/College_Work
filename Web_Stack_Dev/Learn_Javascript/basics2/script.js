@@ -37,7 +37,7 @@ const displayOutput = (idname, bool, message, eligiblity = null) => {
 
 
 const nameHandler = () => {
-    const nameRegex = /^[a-zA-Z/s]{3,}$/;
+    const nameRegex = /^[a-zA-Z\s]{3,}$/;
     displayOutput(
         document.getElementById('res_name'), 
         nameRegex.test(user_name.value), 
