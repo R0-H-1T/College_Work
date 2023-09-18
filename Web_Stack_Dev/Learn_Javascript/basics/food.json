@@ -1,0 +1,43 @@
+{
+    "Pizza": [
+        {
+            "PizzaName": "Country Feast",
+            "Base": "Cheese Burst",
+            "Toppings": [
+                "Jalepeno",
+                "Mushrooom",
+                "Paneer",
+                "Olives",
+                "Capsicum"
+            ],
+            "Veg": true,
+            "Spicy": "Very"
+        },
+        {
+            "PizzaName": "Veggie Delight",
+            "Base": "Thin Crust",
+            "Toppings": [
+                "Olives",
+                "Paneer",
+                "Fiery Pepper",
+                "Cherry Tomatoes",
+                "Onion"
+            ],
+            "Veg": false,
+            "Spicy": "Medium"
+        },
+        {
+            "PizzaName": "Veggie Delight",
+            "Base": "Thin Crust",
+            "Toppings": [
+                "Olives",
+                "Paneer",
+                "Fiery Pepper",
+                "Cherry Tomatoes",
+                "Onion"
+            ],
+            "Veg": false,
+            "Spicy": "Medium"
+        }
+    ]
+}
