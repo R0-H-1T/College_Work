@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            color:white;
+            background-color: black;
+            font-size: larger;
+        }
+        button {
+            margin-top:20px;
+            width: 100%;
+        }
+        table{
+            margin-left: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Form Validation</h1>
+
+    <form action="">
+        <table>
+            <tr>
+                <td><label for="user_name">Name</label></td>
+                <td><input type="text" name="" id="user_name" required></td>
+                <td id="res_name">  </td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" name="" id="email" required></td>
+                <td id="res_email"> </td>
+
+            </tr>
+
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="password" name="" id="pass" required></td>
+                <td id="res_pass">  </td>
+
+            </tr>
+
+            <tr>
+                <td><label for="conf_password">Confirm Password</label></td>
+                <td><input type="password" name="" id="conf_password" required></td>
+                <td id="res_conf"> </td>
+
+            </tr>
+
+            <tr>
+                <td><label for="dob">Date of Birth</label></td>
+                <td><input type="date" name="" id="dob" required></td>
+                <td id="res_dob"></td>
+
+            </tr>
+
+            <tr>
+                <td colspan="2" ><button id="sub" type="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
