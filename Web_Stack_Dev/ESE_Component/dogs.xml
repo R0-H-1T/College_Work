@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="dogs.xsl"?> 
+
+<dogs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dog>
+        <breed>Golden Retriever</breed>
+        <color>Golden</color>
+        <country>United States</country>
+    </dog>
+    <dog>
+        <breed>Golden Retriever</breed>
+        <color>Golden</color>
+        <country>United States</country>
+    </dog>
+    <dog>
+        <breed>Golden Retriever</breed>
+        <color>Golden</color>
+        <country>United States</country>
+
+    </dog>
+    <dog>
+        <breed>Golden Retriever</breed>
+        <color>Golden</color>
+        <country>United States</country>
+
+    </dog>
+    <dog>
+        <breed>Golden Retriever</breed>
+        <color>Golden</color>
+        <country>United States</country>
+
+    </dog>
+    <dog>
+        <breed>Golden Retriever</breed>
+        <color>Golden</color>
+        <country>United States</country>
+
+    </dog>
+    <dog>
+        <breed>Golden Retriever</breed>
+        <color>Golden</color>
+        <country>United States</country>
+
+    </dog>
+    <dog>
+
+        <breed>Golden Retriever</breed>
+        <color>Golden</color>
+        <country>United States</country>
+    </dog>
+    <dog>
+
+        <breed>Golden Retriever</breed>
+        <color>Golden</color>
+        <country>United States</country>
+    </dog>
+    
+</dogs>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color:black;
+            color:white
+        }
+        h1{
+            font-size: 90px;
+        }
+        h2{
+            font-size: 35px;
+        }
+        button{
+            margin-top: 30px;
+            width: 50%;
+            padding: 10px 10px;
+        }
+        table{
+            width: 40%;
+        }
+        input{
+            width: 100%;
+        }
+        textarea{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <center>
+
+        <h1>Feedback Form</h1>
+    
+        <form action="">
+
+            <table >
+                <tr>
+                    <td colspan="2"><h2>Leave a Comment</h2></td>
+                </tr>
+                <tr id="margin">
+                    <td><label for="user_name">Name</label></td>
+                    <td><input type="text" name="" id="user_name" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="res_name"></td>
+                </tr>
+                <tr id="margin">
+                    <td><label for="email">Email</label></td>
+                    <td><input type="text" name="" id="email" required></td>    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="res_email"></td>
+                </tr>
+                <tr id="margin">
+                    <td><label for="comment">Comment</label></td>
+                    <td><textarea name="" id="comment" cols="21" rows="5" required></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="res_comment"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <center>
+                            <button type="submit">Submit</button>
+                        </center>
+                    </td>
+                </tr>
+        
+            </table>
+        </form>
+    </center>
+
+    <script src="./feedback.js"></script>
+</body>
+</html>

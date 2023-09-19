@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs Display</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #innerdiv{
+            margin-top:50px;
+            background-color: rgb(232, 232, 232);
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <center>
+        <h1>Dogs Display</h1>
+        <button id="btn">Fetch Dogs</button>
+    </center>
+
+
+
+    <div id="demo"></div>
+
+    <script>
+
+        function handleFetch(){            
+            fetch('./dogsDisp.json')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                data.forEach(dog => {
+                    var p = document.createElement('div');
+                    p.setAttribute('id', 'innerdiv');
+                    p.innerHTML = `<center>
+                        <p><b>Breed:</b> ${dog.Breed}</p>
+                        <p><b>Color:</b> ${dog.Color}</p>
+                        <p><b>Country:</b> ${dog.Country}</p> </center>
+                    `;
+                    document.getElementById('demo').appendChild(p);
+                    console.log(dog.Breed, dog.Country, dog.Color)
+                });
+            });
+        }
+
+        document.getElementById('btn').addEventListener('click', handleFetch);
+
+    </script>
+</body>
+</html>

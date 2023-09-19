@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="dogs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="dog">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="breed" type="xs:string" />
+                            <xs:element name="color" type="xs:string" />
+                            <xs:element name="country" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+<!-- <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="dogs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="dog">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="breed" type="xs:string" />
+              <xs:element name="color" type="xs:string" />
+              <xs:element name="country" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema> -->
