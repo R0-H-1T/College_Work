@@ -1,0 +1,87 @@
+<!-- 
+    how is this working?
+    - in your app directory(blog) there is a file named apps.py, which has a class 
+      inheritaing from AppCongig class. Copy the name of the class and go to 
+      settings.py in root dir.
+    - paste it in the INSTALLED_APPS list under your:
+        >> [APP_NAME].apps.[CLASS_NAME],
+    - create a template dir in your app and then another dir of your apps name inside
+      and then all the html files
+    - got to views.py and make necessary changes by looking into views.py
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+
+            /* background-color: #f8f9fa; */
+
+        }
+        .jumbotron {
+            background-color: #343a40;
+            color: #fff;
+            padding: 100px;
+        }
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">My Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div class="jumbotron text-center">
+        <h1>Welcome to My Blog</h1>
+        <p>A simple blog app where you can keep track of your activities and and show them to the world.</p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+    </div>
+
+    <!-- Content Section -->
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ultricies neque. Donec nec ullamcorper erat.</p>
+
+        <h2>Our Services</h2>
+        <ul>
+            <li>Service 1</li>
+            <li>Service 2</li>
+            <li>Service 3</li>
+        </ul>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
