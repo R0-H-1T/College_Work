@@ -20,7 +20,14 @@
           </tr>
 
           <!-- <xsl:apply-templates select="dogs/dog"/> -->
-          
+          <!-- <xsl:for-each select="dogs/dog">
+          <tr>
+            <td><xsl:value-of select="dog/breed"/></td>
+            <td><xsl:value-of select="dog/color"/></td>
+            <td><xsl:value-of select="dog/country"/></td>
+          </tr>
+          </xsl:for-each> -->
+
           <xsl:apply-templates select="dog"/>
         </table>
       </body>

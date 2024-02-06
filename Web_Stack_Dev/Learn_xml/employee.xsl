@@ -6,7 +6,7 @@
   <xsl:template match="employees">
     <html>
         <title>Employee list</title>
-        <style>
+        <style> 
             table,
     th,
     td {

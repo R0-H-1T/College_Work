@@ -1,0 +1,5 @@
+Hello and welcome to the world of c. Today Im going to
+take you on a tour of this amazing world of c. C is a programming
+language.
+
+

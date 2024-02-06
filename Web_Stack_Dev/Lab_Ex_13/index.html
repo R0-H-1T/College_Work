@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a reservation</title>
+</head>
+
+<body>
+    <center>Make a reservation</center>
+
+    <form>
+        <label for="guestName">Guest Name:</label>
+        <input type="text" id="guestName" name="guestName" required><br><br>
+
+        <label for="checkInDate">Check-in Date:</label>
+        <input type="date" id="checkInDate" name="checkInDate" required><br><br>
+
+        <label for="checkOutDate">Check-out Date:</label>
+        <input type="date" id="checkOutDate" name="checkOutDate" required><br><br>
+
+        <label for="roomType">Room Type:</label>
+        <select id="roomType" name="roomType" required>
+            <option value="standard">Standard</option>
+            <option value="deluxe">Deluxe</option>
+            <option value="suite">Suite</option>
+        </select><br><br>
+
+        <input type="submit" id="sub" value="Submit">
+    </form>
+
+
+</body>
+
+</html>

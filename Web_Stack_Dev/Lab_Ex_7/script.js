@@ -51,55 +51,19 @@ const ajaxHandler = () => {
 
 
 document.getElementById('fetchBooks').addEventListener('click', ajaxHandler);
-/*
-document.getElementById('header').textContent = 'Works';
-
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://my-json-server.typicode.com/dmitrijt9/book-api-mock/books', true);
-
-xhr.responseType = 'json';
-
-xhr.onload = () => {
-    //console.log(xhr.response); // will give raw json
-    const data = xhr.response; //js object 
-    console.log(data);
-    data.forEach(dataitem => console.log(dataitem.author_id, dataitem.title, dataitem.releaseDate));
-    data.forEach(dataitem => {
-        let newElem = document.createElement('li');
-        newElem.innerHTML = `Title: <b>${dataitem.title}</b><p>Author Id: ${dataitem.author_id}<br>Release Year: ${dataitem.releaseDate}</p>`;
-        const myList = document.getElementById('demo');
-        myList.appendChild(newElem)
-    });
-    // document.getElementById('demo').textContent = data;
-}    
-xhr.send();
-
-
-let booklist = document.getElementById('bookList');
-booklist.addEventListener('click', ajaxHandler)
-*/
 
 
 
-// const booksurl = "https://openlibrary.org/works/OL45804W.json"
-// const books = fetch(booksurl);
-// books
-//   .then((response) => {
-//     return response.json();
-//   })
-//   .catch(handleError);
 
+// async function logMovies() {
+//     const response = await fetch("https://raw.githubusercontent.com/benoitvallon/100-best-books/master/books.json");
+//     const movies = await response.json();
+//     movies.forEach(function(item) {
+//         console.log(item.author);
+//     });
+// }
 
-
-async function logMovies() {
-    const response = await fetch("https://raw.githubusercontent.com/benoitvallon/100-best-books/master/books.json");
-    const movies = await response.json();
-    movies.forEach(function(item) {
-        console.log(item.author);
-    });
-}
-
-logMovies()
+// logMovies()
 
 
 

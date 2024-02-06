@@ -2,36 +2,48 @@ import React, { useState } from 'react'
 
 
 export const Content = () => {
-    const [name, setName] = useState('NAME CHANGED');
-    const [count, setCount] = useState(0);
+    const [items, setItems] = useState([
+      {
+          id: 1,
+          checked: false,
+          item: 'Gummy Bears'
+      },
+      { 
+          id: 2,
+          checked: false,
+          item: 'Milky Way'
+      },
+      {
+          id: 3,
+          checked: false,
+          item: 'Sneakers'
+      }
+    ]);
 
-    function nameHandler(){
-      const names = ['Kevin', 'Bob', 'Marlo'];
-      const int = Math.floor(Math.random() * 3);
-      setName(names[int]);
+    const handleCheck = (id) => {
+      const listItems = items.map(item => item.id === id ? { ...item, checked: !item.checked } : item)
+      setItems(listItems)
     }
 
-    const handleClick = () => {
-      setCount(count + 1)
-      console.log(count);
-    }
-
-    const handleClick2 = (name) => {
-      console.log(`${name} You Clicked this button`);
-    }
-
-    const handleClick3 = (e) => {
-      console.log(e.target);
-    }
   return (
-    <main>
-        <h2>
-            Hello {name}
-        </h2>
-        <button onClick={nameHandler} >Change Name!</button> <br />
-        <button onClick={handleClick} >Show Count</button> <br />
-        <button onClick={(name) => handleClick2('Rohit')} >Click</button> <br />
-        <button onClick={(e) => handleClick3(e)} >Target</button>
-    </main>
+    <>
+      <main>
+        <ul>
+          {
+            items.map((item) => (
+              <li className='item'>
+                <input 
+                type="checkbox"
+                onChange={() => handleCheck(item.id)}
+                checked={item.checked}
+                 />
+                <label>{item.item}</label>
+              </li>
+            ))
+          }
+        </ul>
+      </main>
+    </>
   )
 }
+

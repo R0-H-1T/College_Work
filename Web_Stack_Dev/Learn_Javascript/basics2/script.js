@@ -21,7 +21,7 @@ const displayOutput = (idname, bool, message, eligiblity = null) => {
         idname.style.color = 'green';
     }else{
         idname.textContent = message;
-        idname.style.color = 'red';
+        idname.style.color = 'red'; 
     }
     if(eligiblity!=null && bool){    
         span = document.createElement('span');

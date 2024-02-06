@@ -35,6 +35,7 @@ const jokesHandler = () => {
             joke.setAttribute('id', 'joke')
             var button = document.createElement('button');
             button.textContent = 'Ans';
+            button.setAttribute('id', 'ansbtn')
             // button.setAttribute('class', 'btn btn-primary');
             joke.appendChild(button);
             document.getElementById('demo').appendChild(joke);

@@ -5,5 +5,5 @@ export const Header = () => {
     <header>
         <h1>Groceries</h1>
     </header>
-  )
+  ) 
 }

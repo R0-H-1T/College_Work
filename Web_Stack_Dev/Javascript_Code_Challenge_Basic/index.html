@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <style>
+        .addm{
+            margin-top:30px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Javascript Code Challenge</h1>
+        <button class="addm"onclick="playGame()">1. Play number game </button>
+        <div id="challenge1"></div>
+        <div class="addm">
+            2.
+            <form action="">
+                multiplication:
+                <input type="number" name="ma" id="ma">
+                <input type="number" name="mb" id="mb"><br>
+                division:
+                <input type="number" name="da" id="da">
+                <input type="number" name="db" id="db">
+                <br>
+                <button type="button" onclick="calculate()">Calculate</button><br>
+                <div id="challenge2"></div>
+            </form>
+        </div>
+        <br>
+        3. <button class="addm"onclick="getURL()">Get URL</button>
+            <div id="challenge3"></div>
+
+        <div class="addm">
+            <label for="myfile">4. Enter file name: </label>
+            <input type="text" name="myfile" id="file_ex">
+                <div id="challenge4"></div>
+            <button onclick="getFileExtension()">Get File Extension</button>
+        </div>
+
+
+        <div class="addm">
+            <button onclick="myDateFunc()">Get Date</button>
+            <div id="challenge5"></div>
+        </div>
+    </center>
+
+    <script src="script.js"></script>
+</body>
+</html>

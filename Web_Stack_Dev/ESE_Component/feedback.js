@@ -17,11 +17,11 @@ function displayOutput(idname, bool, msg){
 
 
 function handleUserName(){
-    const nameRegex = /^[a-zA-Z0-9\s]{3,}$/;
+    const nameRegex = /^[a-zA-Z\s]{3,}$/;
     displayOutput(
         document.getElementById('res_name'),
         nameRegex.test(user_name.value),
-        'Must be alphanumeric and atleast 3 characters long.');
+        'Must letters and atleast 3 characters long.');
 }
 
 function handleEmail(){

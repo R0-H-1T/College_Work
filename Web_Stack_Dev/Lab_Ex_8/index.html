@@ -6,6 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Products</title>
     <style>
+        .sort{
+            margin-left: 180px;
+        }
     </style>
 </head>
 <body>
@@ -22,14 +25,15 @@
         </div>
         <span id="search-res"></span>
     </center>
+    <button id="sortName"  class="btn btn-primary mt-3 sort">Sort by name</button>
+    <button id="sortPrice"  class="btn btn-success mt-3 ">Sort by Price</button>
 
     <div class="container text-center mt-4">
         <div class="row">
             <div class="col">
-                <button class="btn btn-primary">Sort by name</button>
-                <button class="btn btn-success">Sort by Price</button>
+                
               <div id="demo" data-bs-spy="scroll"  data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
-          
+                
               </div>
           </div> 
           <div class="col">
@@ -37,7 +41,6 @@
           </div>
         </div>
     </div>
-
 
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

@@ -3,7 +3,7 @@
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="dogs">
-        <xs:complexType>
+        <xs:complexType> 
             <xs:sequence>
                 <xs:element maxOccurs="unbounded" name="dog">
                     <xs:complexType>

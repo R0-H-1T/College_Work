@@ -1,30 +1,24 @@
-from datetime import datetime
+import seaborn as sns
 
 
-def whats_the_input(user_input:str) -> str:
-    while True:
-        if user_input.casefold() == '?':
-            print('\nYour date should be in format - dd/mm/yyy.\nExample: 12/12/2001.\nEnter again.')
-            user_input = input()
-            continue
-        elif user_input.casefold() == 'q':
-            try:
-                print('\nBye! Hope you run this program again.')
-            finally:
-                break
-        else:
-            try:
-                d, m, y = input('Enter your dob in dd/mm/yyy format: ').split('/')
-                td, tm, ty = datetime.today().strftime("%d/%m/%Y").split('/')
-                td, tm, ty = int(td), int(tm), int(ty)
-                d, m, y = int(d), int(m), int(y)
-                if ((30>=d or 31>=d)) and (12>=m) and ty>=y:
-                    print('Age: ', ty - y)
-                    user_input = input('\nEnter your dob in dd/mm/yyyy format: ')
-            except ValueError:
-                print('\nIncorrect dob format')
-                user_input = '?'
-            
-                
+import pandas as pd
+import matplotlib.pyplot as plt
 
-whats_the_input(input('Enter your dob in dd/mm/yyyy format: '))
+
+movie = pd.read_csv(r'./csv_s/movies.csv')
+
+animation = movie[movie['Genre'] == 'Animation']
+comedy = movie[movie['Genre'] == 'Comedy']
+romance = movie[movie['Genre'] == 'Romance']
+drama = movie[movie['Genre'] == 'Drama']
+
+
+
+
+
+numeric_columns = ['Audience score %', 'Profitability', 'Rotten Tomatoes %', 'Worldwide Gross']
+
+# Create a pair plot
+sns.pairplot(movie[numeric_columns], diag_kind='kde')
+plt.suptitle('Pair Plot of Numeric Columns', y=1.02)
+plt.show()

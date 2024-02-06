@@ -1,0 +1,31 @@
+<!-- 
+    how is this working?
+    - in your app directory(blog) there is a file named apps.py, which has a class 
+      inheritaing from AppCongig class. Copy the name of the class and go to 
+      settings.py in root dir.
+    - paste it in the INSTALLED_APPS list under your:
+        >> [APP_NAME].apps.[CLASS_NAME],
+    - create a template dir in your app and then another dir of your apps name inside
+      and then all the html files
+    - got to views.py and make necessary changes by looking into views.py
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Home</title>
+ </head>
+ <body>
+     <center>
+         <h1 style="
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             font-weight: 600;
+             ">
+             This is my home page<br>Blog Application
+        </h1>
+     </center>
+ </body>
+ </html>

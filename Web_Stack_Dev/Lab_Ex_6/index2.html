@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index2 html</title>
+</head>
+<body>
+    <h1>form checking</h1>
+    <input type="text" id="test1">
+    <input type="date" id="test1">
+    <div class="demo"></div>
+
+
+    <script>
+        let test1 = document.querySelector('#test1');
+        let demo = document.querySelector('.demo');
+
+        test1.addEventListener('change', (e) => {
+            demo.innerHTML = e.target.value;
+        })
+    </script>
+</body>
+</html>
